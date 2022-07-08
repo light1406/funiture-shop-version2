@@ -1,6 +1,10 @@
 package com.example.funitureshopversion2.obj;
 
 public class User {
+    public static final int ROOT_ROLE = 0;
+    public static final int ADMIN_ROLE = 1;
+    public static final int USER_ROLE = 2;
+
     private String id;
     private String username;
     private String password;
@@ -25,6 +29,18 @@ public class User {
         this.phone = phone;
         this.address = address;
         this.role = role;
+    }
+
+    public boolean isAdmin(){
+        return this.role == ADMIN_ROLE;
+    }
+
+    public boolean isUser(){
+        return this.role == USER_ROLE;
+    }
+
+    public boolean isRoot(){
+        return this.role == ROOT_ROLE;
     }
 
     public String getId() {

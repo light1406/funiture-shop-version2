@@ -24,6 +24,13 @@ public class Order {
         this.items = items;
     }
 
+    public double getTotal(){
+        double total = 0;
+        for (ProductItem item: items)
+            total += item.getPrice();
+        return total;
+    }
+
     public String getId() {
         return id;
     }

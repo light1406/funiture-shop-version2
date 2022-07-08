@@ -63,6 +63,14 @@ public class Product {
                 '}';
     }
 
+    public boolean isProduct(String id){
+        return this.id.equals(id);
+    }
+
+    public int getQuantityImport(){
+        return this.stock + this.sold;
+    }
+
     public String getId() {
         return id;
     }

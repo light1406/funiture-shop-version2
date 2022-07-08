@@ -9,6 +9,18 @@ public class ProductItem {
         this.quantity = quantity;
     }
 
+    public boolean isProduct(String id){
+        return this.product.isProduct(id);
+    }
+
+    public void increaseQuantity(){
+        this.quantity+=1;
+    }
+
+    public double getPrice(){
+        return product.getPrice() * (1 - product.getDiscount()) * quantity;
+    }
+
     public Product getProduct() {
         return product;
     }

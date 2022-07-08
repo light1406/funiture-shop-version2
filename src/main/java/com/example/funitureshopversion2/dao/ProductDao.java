@@ -12,7 +12,7 @@ public class ProductDao implements IDao{
     private static ProductDao instance;
 
     private ProductDao(){
-        
+
     }
 
     public static ProductDao getInstance(){
@@ -27,7 +27,7 @@ public class ProductDao implements IDao{
     }
 
     @Override
-    public boolean add(Object o) {
+    public boolean save(Object o) {
         return false;
     }
 

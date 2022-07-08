@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface IDao<T> {
     T get(String id);
-    boolean add(T t);
+    boolean save(T t);
     boolean update(T t, T nt);
     boolean remove(T t);
     List<T> getAll();

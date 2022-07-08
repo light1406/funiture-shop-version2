@@ -28,16 +28,10 @@ public class ShopCart {
     }
 
     public double getTotalAll() {
-        double total = 0;
-        for (ProductItem item : items)
-            total += item.getPrice();
-        return total;
+        return items.stream().mapToDouble(i -> i.getPrice()).sum();
     }
 
     public double getTotal(List<ProductItem> items){
-        double total = 0;
-        for (ProductItem item : items)
-            total += item.getPrice();
-        return total;
+        return items.stream().mapToDouble(i -> i.getPrice()).sum();
     }
 }

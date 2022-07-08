@@ -25,10 +25,7 @@ public class Order {
     }
 
     public double getTotal(){
-        double total = 0;
-        for (ProductItem item: items)
-            total += item.getPrice();
-        return total;
+        return items.stream().mapToDouble(i -> i.getPrice()).sum();
     }
 
     public String getId() {
